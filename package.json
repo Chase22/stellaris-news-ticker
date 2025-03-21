@@ -5,7 +5,8 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url https://chase22.github.io/stellaris-news-ticker/"
   },
   "dependencies": {
     "bowser": "^2.11.0",
