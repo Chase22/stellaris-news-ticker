@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcel Vanilla App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="main.js" type="module" />
+</head>
+
+<body>
+  <header id="browser-warning">
+    There's currently an issue with non chrome based browsers in the library used for image exporting.<br/>
+    It might not work as expected in browsers other than chrome. I will update the page as soon as possible
+  </header>
+
+  <main>
+    <div class="left">
+      <input type="text" id="news-title">
+      <textarea rows="5" cols="40" id="news-body"></textarea>
+      <input type="date" id="news-date" min="2200-01-01" value="2200-01-01" max="2700-01-01">
+      <input type="text" list="news-empire-data" id="news-empire">
+      <button id="news-export">To Image</button>
+    </div>
+
+    <div class="right">
+      <div id="news" style="padding: 10px;">
+        <div style="width:400px;padding-bottom: 10px;">
+          <div class="ui panel">
+            <div class="ui panel content">
+              <h3 id="news-title-view">GNT Launched</h3>
+              <hr>
+              <span id="news-body-view">
+                The Galatic Senat officially launched the Galactic News Ticker to be used by all Empires. Allowing
+                everyone in
+                the galaxy to stay up to date with current events.</span>
+              <b id="news-date-view">- 01.01.2200</b>
+            </div>
+          </div>
+        </div>
+        <div style="width:400px">
+          <div class="ui panel">
+            <div class="ui panel content">
+              <b>Author:</b> <span id="news-author">Galactic News Ticker</span></br>
+              <span style="font-size: 10px;">
+                GNT is an independant, interstellar organisation of the galactic community. It takes no editorial
+                responsibility for any news send and is only responsible for distribution of news <br />
+                </sub>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
