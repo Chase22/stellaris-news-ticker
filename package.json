@@ -3,10 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "source": "src/index.html",
+  "type": "module",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
-    "predeploy": "rm -rf dist && parcel build --public-url https://chase22.github.io/stellaris-news-ticker/"
+    "predeploy": "rm -rf dist && parcel build --public-url https://chase22.github.io/stellaris-news-ticker/",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
   },
   "dependencies": {
     "bowser": "^2.11.0",
@@ -17,7 +20,12 @@
     "marked": "^15.0.7"
   },
   "devDependencies": {
-    "parcel": "^2.14.0",
-    "process": "^0.11.10"
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tsconfig/svelte": "^5.0.4",
+    "sass-embedded": "^1.86.0",
+    "svelte": "^5.20.2",
+    "svelte-check": "^4.1.4",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
   }
 }
